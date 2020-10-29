@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root{
+    --modal-duration: .5s;
+    --primary-color: #30336b;
+    --secondary-color: #be2edd
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+body.show-nav{
+    margin: 0;
+    transform: translateX(15rem);
+}
+
+nav{
+    background-color: var(--primary-color);
+    border-right: 2px solid rgba(200, 200, 200, 0.1);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15rem;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+
+nav .logo{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+nav .logo img{
+    height: 6rem;
+    word-wrap: 6rem;
+    border-radius: 50%;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+    padding: 1.5rem;
+}
+
+nav ul li:first-of-type{
+    border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+header{
+    font-size: 130%;
+    text-align: center;
+    position: relative;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 3rem 1rem;
+}
+
+header p{
+    margin: 2rem 0;
+}
+
+button, input[type = 'submit']{
+    background-color: var(--secondary-color);
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+.toggle{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+}
+
+.cta-btn{
+    font-size: 1.5rem;
+    padding: .8rem 2rem
+}
+
+.container{
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+}
+
+.modal-container{
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.modal{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 .8px rgba(0, 0, 0, .3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 25rem;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+.show{
+    display: block;
+}
+.modal-header{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+}
+
+.modal-header h3{
+    margin: 0;
+    border-bottom: 1p solid #333;
+}
+
+.modal-content{
+    padding: 1.2rem;
+}
+.modal-form div{
+    margin: 1rem 0;
+}
+.modal-form label{
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.modal-form .form-input{
+    padding: .8rem;
+    width: 100%;
+}
+
+.close-btn{
+    background: transparent;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@keyframes modalopen{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
