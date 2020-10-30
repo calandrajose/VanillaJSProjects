@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background-color: #e4f9f5;
+  color: #34495e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  color: #2980b9;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.98);
+}
+button:focus {
+  outline: 0;
+}
+h1 {
+  margin: 1.3rem 0 0;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #34495e;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  margin-bottom: 1.5rem;
+}
+.figure-part {
+  display: none;
+}
+
+.game-container {
+  padding: 1.4rem 2rem;
+  position: relative;
+  margin: auto;
+  height: 22rem;
+  width: 28rem;
+}
+.wrong-letters-container {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: right;
+}
+.wrong-letters-container p {
+  margin: 0 0 0.4rem;
+}
+.wrong-letters-container span {
+  font-size: 1.6rem;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.letter {
+  font-size: 2rem;
+  border-bottom: 3px solid #2980b9;
+  margin: 0 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.125rem;
+  width: 1.25rem;
+}
+
+.notification-container {
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0.5rem;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -50px;
+  transition: transform 0.9s ease-in-out;
+}
+
+.notification-container p {
+  margin: 0;
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+.popup-container.hide{
+  display: none;
+}
+
+
+.popup {
+  color: rgb(255, 255, 255);
+  background-color: #3fd7f1;
+  border-radius: 5px;
+  box-shadow: 0px 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  width: 20rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-container.show {
+  transform: translateY(-50px);
+}
