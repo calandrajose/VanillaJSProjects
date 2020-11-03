@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  margin: none;
+  background-color: rgb(36, 31, 31);
+  color: #fff;
+}
+button {
+  margin: 0;
+  background-color: #fff;
+  height: inherit;
+  border: 0;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+.container {
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.ingredients {
+  /* display: flex;
+  flex-flow: row wrap; */
+  list-style-type: none;
+  width: 100%;
+}
+.ingredients li {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  color: black;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0.2rem;
+  padding: 5px;
+  text-align: center;
+}
+.instructions {
+  text-align: center;
+}
+.meals {
+  width: 60rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.meal {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  margin: 0.3rem;
+}
+.meal-category {
+  margin: 2rem;
+  border: 2px orange dashed;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.meal img {
+  width: 100%;
+  height: 100%;
+  border: 4px #fff solid;
+  border-radius: 2px;
+}
+
+.meal-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+}
+
+.meal-info:hover {
+  opacity: 1;
+}
+.instructions {
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+.random-search-btn {
+  margin-left: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.search-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search {
+  text-align: center;
+  background-color: white;
+  width: 18.75rem;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid rgb(53, 49, 49);
+  height: inherit;
+}
+
+.search-container {
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-meal {
+  margin: 30px auto;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-meal img {
+  width: 80%;
+  height: 80%;
+  border: 2px #fff solid;
+  border-radius: 5px;
+}
+
+.img-container{
+    width: 80%;
+    height: 80%;
+}
