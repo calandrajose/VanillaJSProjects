@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+  background-color: rgb(62, 170, 156);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 0.3rem 1.2rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0 0 2.5rem;
+}
+
+input{
+    border: 0;
+    border-radius: 4px;
+    font-size: .9rem;
+    width: 20rem;
+    padding: 0.8rem 1.1rem;
+    margin-top: .8rem;
+}
+
+.container {
+  background-color: rgb(3, 113, 128);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 1.4rem;
+  width: 31rem;
+  position: relative;
+  text-align: center;
+}
+
+.difficulty {
+  background-color: rgb(169, 245, 255);
+  cursor: pointer;
+  width: 8rem;
+  color: black;
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
+.end-game-container{
+    background-color: inherit;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.score-container{
+    position: absolute;
+    top: 4rem;
+    right: 1.5rem;
+}
+
+.settings {
+  background-color: rgba(3, 113, 128, 0.3);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.settings.hide {
+  transform: translateY(-100%);
+}
+
+.settings-btn {
+    border: 1px solid rgba(3, 113, 128);;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.time-container{
+    position: absolute;
+    top: 4rem;
+    left: 1.5rem;
+}
+
+select:focus button:focus {
+    outline: none;
+  }
+  
+  label {
+    color: white;
+  }
+  
+
+  @media (max-height: 400px){
+    .settings{
+      transform: translateY(-100%);
+  }
+
+
+}
