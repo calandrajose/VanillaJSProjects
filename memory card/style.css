@@ -183,3 +183,21 @@ body {
     max-width: 100%;
   }
   
+
+  #delete{
+    border: none;
+    margin-top: 0;
+    padding: .5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    color: grey;
+  }
+
+  #delete:hover{
+    color: black;
+   font-size: 1.2rem;
+    transition: 0.2s ease-in-out; 
+  }
+
