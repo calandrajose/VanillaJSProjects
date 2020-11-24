@@ -107,7 +107,7 @@ function playAgain(e) {
   resetArrays();
   resetUI();
   selectedWord = words[Math.floor(Math.random() * words.length)];
-  displayWord();
+  init()
 }
 
 function init() {
